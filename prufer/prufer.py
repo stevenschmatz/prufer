@@ -13,6 +13,9 @@ Tree = List[Edge]
 def build_tree(arr: List[int]) -> Tree:
     '''Converts a Prüfer sequence to its respective tree.'''
 
+    if any([index > len(arr) for index in arr]):
+        raise ValueError('All elements must be less than the length of the list.')
+
     tree = []
 
     graph = list(range(len(arr) + 2))

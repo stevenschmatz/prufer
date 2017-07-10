@@ -1,1 +1,1 @@
-from prufer import build_tree
+from .prufer import build_tree
